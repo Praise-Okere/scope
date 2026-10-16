@@ -1,0 +1,8 @@
+{
+  "tool": "request_scoped_card",
+  "arguments": {
+    "merchantLock": "delta.com",
+    "spendLimit": 450,
+    "purpose": "Book NYC -> LAX error fare"
+  }
+}

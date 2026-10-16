@@ -7,6 +7,18 @@ scopecard-plugin/   PayBox plugin (MCP tools) -> upload dist/plugin.mjs
 scopecard-api/      Next.js: x402 /api/generate-card, vault, Kill Switch dashboard
 ```
 
+## Quick start
+
+```bash
+./run.sh          # plugin checks + API build + 20 end-to-end tests, then serves the site
+```
+
+- Landing page: http://localhost:3000
+- Kill Switch dashboard: http://localhost:3000/dashboard
+- `run.sh` downloads a project-local Node 24 into `.node/` if your system Node differs.
+- `./run.sh --live` skips the tests and serves with your real `scopecard-api/.env.local`.
+- `cd scopecard-api && pnpm check-cdp` checks your Coinbase CDP key without printing the secret.
+
 ## How the pieces fit
 
 1. Agent calls the plugin tool `request_scoped_card { merchantLock, spendLimit, purpose }`.
